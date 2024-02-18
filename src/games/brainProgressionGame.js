@@ -28,6 +28,7 @@ const generateQuestionAndAnswer = () => {
   };
 
 export default function playBrainProgressionGame() {
+
   const name = welcomeUser();
   console.log('What number is missing in the progression?');
 

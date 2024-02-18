@@ -23,6 +23,7 @@ const isPrime = (n) => {
   };
   
   export default function playBrainPrimeGame() {
+
     const name = welcomeUser();
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   

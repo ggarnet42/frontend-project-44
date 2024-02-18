@@ -15,6 +15,7 @@ const generateQuestionAndAnswer = () => {
 };
 
 export default function playBrainEvenGame() {
+
     const name = welcomeUser();
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
   
