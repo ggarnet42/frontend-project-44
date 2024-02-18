@@ -2,6 +2,4 @@
 
 import playBrainCalcGame from '../src/games/brainCalcGame.js';
 
-console.log('brain-calc');
-
 playBrainCalcGame();
