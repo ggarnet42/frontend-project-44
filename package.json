@@ -1,8 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/ggarnet42/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ggarnet42/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "Brain Games is a collection of five console games to train your brain.",
   "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",
@@ -12,13 +11,8 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
   "license": "ISC",
   "dependencies": {
-    "brain-even": "^0.1.12",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
