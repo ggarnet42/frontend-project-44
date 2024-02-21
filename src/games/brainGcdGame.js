@@ -1,5 +1,6 @@
 import playGame from '../index.js';
 import welcomeUser from '../cli.js';
+import getRandomInRange from '../utils.js';
 
 const findGcd = (a, b) => {
   if (b === 0) {
@@ -8,11 +9,9 @@ const findGcd = (a, b) => {
   return findGcd(b, a % b);
 };
 
-const generateRandomNumber = () => Math.floor(Math.random() * 100) + 1;
-
 const generateQuestionAndAnswer = () => {
-  const number1 = generateRandomNumber();
-  const number2 = generateRandomNumber();
+  const number1 = getRandomInRange();
+  const number2 = getRandomInRange();
   const question = `${number1} ${number2}`;
   const correctAnswer = String(findGcd(number1, number2));
   return { question, correctAnswer };
@@ -21,6 +20,5 @@ const generateQuestionAndAnswer = () => {
 export default function playBrainGcdGame() {
   const name = welcomeUser();
   console.log('Find the greatest common divisor of given numbers.');
-  const isCorrectAnswer = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
-  playGame(generateQuestionAndAnswer, isCorrectAnswer, name);
+  playGame(generateQuestionAndAnswer, name);
 }

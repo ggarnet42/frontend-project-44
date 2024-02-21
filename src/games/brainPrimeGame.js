@@ -1,5 +1,6 @@
 import playGame from '../index.js';
 import welcomeUser from '../cli.js';
+import getRandomInRange from '../utils.js';
 
 const isPrime = (n) => {
   if (n <= 1) {
@@ -13,10 +14,8 @@ const isPrime = (n) => {
   return true;
 };
 
-const generateRandomNumber = () => Math.floor(Math.random() * 100) + 1;
-
 const generateQuestionAndAnswer = () => {
-  const number = generateRandomNumber();
+  const number = getRandomInRange();
   const question = `${number}`;
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return { question, correctAnswer };
@@ -25,6 +24,5 @@ const generateQuestionAndAnswer = () => {
 export default function playBrainPrimeGame() {
   const name = welcomeUser();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  const isCorrectAnswer = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
-  playGame(generateQuestionAndAnswer, isCorrectAnswer, name);
+  playGame(generateQuestionAndAnswer, name);
 }

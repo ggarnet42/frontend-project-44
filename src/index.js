@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export default function playGame(generateQuestionAndAnswer, isCorrectAnswer, name) {
+export default function playGame(generateQuestionAndAnswer, name) {
   let correctAnswersCount = 0;
 
   while (correctAnswersCount < 3) {
@@ -9,7 +9,7 @@ export default function playGame(generateQuestionAndAnswer, isCorrectAnswer, nam
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (isCorrectAnswer(userAnswer, correctAnswer)) {
+    if (userAnswer === correctAnswer) {
       console.log('Correct!');
       correctAnswersCount += 1;
     } else {
