@@ -8,19 +8,19 @@ const generateProgression = () => {
   const length = Math.floor(Math.random() * 6) + 5;
   const firstNumber = generateRandomNumber();
   const step = generateRandomNumber();
-    for (let i = 0; i < length; i += 1) {
-      progression.push(firstNumber + i * step);
-    }
+  for (let i = 0; i < length; i += 1) {
+    progression.push(firstNumber + i * step);
+  }
   const hiddenIndex = Math.floor(Math.random() * length);
   const hiddenValue = progression[hiddenIndex];
   progression[hiddenIndex] = '..';
-  return { progression, hiddenIndex, hiddenValue};
+  return {progression, hiddenIndex, hiddenValue};
 };
 
 const generateQuestionAndAnswer = () => {
-  const { progression, hiddenValue} = generateProgression(); 
-  const question = progression.join(' '); 
-  const correctAnswer = String(hiddenValue); 
+  const {progression, hiddenValue} = generateProgression();
+  const question = progression.join(' ');
+  const correctAnswer = String(hiddenValue);
   return { question, correctAnswer };
 };
 

@@ -14,14 +14,14 @@ const isPrime = (n) => {
 };
 
 const generateRandomNumber = () => Math.floor(Math.random() * 100) + 1;
-  
+
 const generateQuestionAndAnswer = () => {
   const number = generateRandomNumber();
   const question = `${number}`;
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return { question, correctAnswer };
 };
-  
+
 export default function playBrainPrimeGame() {
   const name = welcomeUser();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
