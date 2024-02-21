@@ -19,11 +19,8 @@ const generateQuestionAndAnswer = () => {
 };
 
 export default function playBrainGcdGame() {
-
   const name = welcomeUser();
   console.log('Find the greatest common divisor of given numbers.');
-
   const isCorrectAnswer = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
-
   playGame(generateQuestionAndAnswer, isCorrectAnswer, name);
 }

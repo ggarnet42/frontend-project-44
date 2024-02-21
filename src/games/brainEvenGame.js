@@ -15,11 +15,8 @@ const generateQuestionAndAnswer = () => {
 };
 
 export default function playBrainEvenGame() {
-
-    const name = welcomeUser();
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  
-    const isCorrectAnswer = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
-  
-    playGame(generateQuestionAndAnswer, isCorrectAnswer, name);
-  }
+  const name = welcomeUser();
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  const isCorrectAnswer = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
+  playGame(generateQuestionAndAnswer, isCorrectAnswer, name);
+}

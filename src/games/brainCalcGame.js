@@ -32,11 +32,8 @@ const generateQuestionAndAnswer = () => {
 };
 
 export default function playBrainCalcGame() {
-
   const name = welcomeUser();
   console.log('What is the result of the expression?');
-
   const isCorrectAnswer = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
-
   playGame(generateQuestionAndAnswer, isCorrectAnswer, name);
 }
