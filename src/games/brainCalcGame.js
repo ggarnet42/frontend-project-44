@@ -1,5 +1,4 @@
 import playGame from '../index.js';
-import welcomeUser from '../cli.js';
 import getRandomInRange from '../utils.js';
 
 const generateRandomOperator = () => {
@@ -30,8 +29,8 @@ const generateQuestionAndAnswer = () => {
   return { question, correctAnswer };
 };
 
+const description = 'What is the result of the expression?';
+
 export default function playBrainCalcGame() {
-  const name = welcomeUser();
-  console.log('What is the result of the expression?');
-  playGame(generateQuestionAndAnswer, name);
+  playGame(description, generateQuestionAndAnswer);
 }

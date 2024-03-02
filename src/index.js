@@ -1,9 +1,11 @@
 import readlineSync from 'readline-sync';
+import welcomeUser from './cli.js';
 
-export default function playGame(generateQuestionAndAnswer, name) {
-  let correctAnswersCount = 0;
+export default function playGame(description, generateQuestionAndAnswer) {
+  const name = welcomeUser();
+  console.log(description);
 
-  while (correctAnswersCount < 3) {
+  for (let correctAnswersCount = 0; correctAnswersCount < 3;) {
     const { question, correctAnswer } = generateQuestionAndAnswer();
 
     console.log(`Question: ${question}`);

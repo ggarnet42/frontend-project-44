@@ -21,8 +21,8 @@ const generateQuestionAndAnswer = () => {
   return { question, correctAnswer };
 };
 
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 export default function playBrainPrimeGame() {
-  const name = welcomeUser();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  playGame(generateQuestionAndAnswer, name);
+  playGame(description, generateQuestionAndAnswer);
 }

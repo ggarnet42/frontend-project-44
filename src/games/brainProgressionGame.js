@@ -27,8 +27,8 @@ const generateQuestionAndAnswer = () => {
   return { question, correctAnswer };
 };
 
+const description = 'What number is missing in the progression?';
+
 export default function playBrainProgressionGame() {
-  const name = welcomeUser();
-  console.log('What number is missing in the progression?');
-  playGame(generateQuestionAndAnswer, name);
+  playGame(description, generateQuestionAndAnswer);
 }

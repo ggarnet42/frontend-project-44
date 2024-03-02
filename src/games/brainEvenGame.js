@@ -13,8 +13,8 @@ const generateQuestionAndAnswer = () => {
   return { question, correctAnswer };
 };
 
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 export default function playBrainEvenGame() {
-  const name = welcomeUser();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  playGame(generateQuestionAndAnswer, name);
+  playGame(description, generateQuestionAndAnswer);
 }

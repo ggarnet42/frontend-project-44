@@ -17,8 +17,8 @@ const generateQuestionAndAnswer = () => {
   return { question, correctAnswer };
 };
 
+const description = 'Find the greatest common divisor of given numbers.';
+
 export default function playBrainGcdGame() {
-  const name = welcomeUser();
-  console.log('Find the greatest common divisor of given numbers.');
-  playGame(generateQuestionAndAnswer, name);
+  playGame(description, generateQuestionAndAnswer);
 }
