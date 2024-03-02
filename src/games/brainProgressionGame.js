@@ -1,5 +1,4 @@
 import playGame from '../index.js';
-import welcomeUser from '../cli.js';
 import getRandomInRange from '../utils.js';
 
 const generateProgression = (start, step, length) => {
